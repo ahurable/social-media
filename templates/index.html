@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Login Page{% endblock %}
+{% block content %}
+    <div class="jumbot" align="center">
+        <div style="margin-top: 15%;">
+        <h1 class="display-4">دست نگه دارید</h1>
+        <p class="lead">پیش از هرچیزی ابتدا در وبسایت ثبت نام کنید!!</p>
+        <hr class="my-4">
+        <p>با ثبت نام در سایت شما می توانید از خدمات متعدد ما بهره مند شوید.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">ثبت نام</a>
+        <a class="btn btn-danger btn-lg" href="#loginForm" role="button">از قبل اکانت دارم</a>
+        </div>
+      </div>
+   <div>
+    <div class="container-fluid d-lg-flex bg-dark justify-content-center" id="loginForm" style="margin-top: 10%;">
+      <div class="col-md-6 col-sm-12" >
+        <img src="/media/img/authentication.png" width="100%" alt="">
+      </div>
+      <div class="col-md-6 col-sm-125 text-white p-4 rounded" align="center">
+        <div class="auth-p">
+        <h2>فرم ورود</h2>
+        <form method="post" action="">
+          <input type="text" id="username" name="username" placeholder="نام کاربری خود را وارد نمایید" class="form-control w-75 mt-3">
+          <input type="password" id="password" name="password" placeholder="رمز عبور خود را وارد کنید" class="form-control w-75 mt-3">
+          <div class="mt-3 w-75" align="right">
+          <input type="checkbox" id="showPasswordCheck" style="color: white;" onclick="showPassword()">
+          <label for="showPasswordCheck">نمایش کلمه عبور</label>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg w-75 mt-2">ورود</button>
+        </form>
+      </div>
+    </div>
+    </div>
+
+    <div>
+      <div class="container-fluid d-lg-flex pt-5 pb-5 justify-content-center" style="background-color: #515C7C;">
+        <div class="container p-3 d-lg-flex">
+          <div class="col-md-7 col-sm-12">
+          <h4>چه کاری واستون قراره انجام بدیم؟</h4>
+          <p>
+            سایت ما یک شبکه اجتماعی هست . به این معنا که اینجا آدما به هم وصل میشن.
+            <br>
+            خب دقیق تر بخوام بگم . شما شاید واستون سوال شده که امثال این کار رو نرم افزار های
+            خارجی بهترشم انجام میدن . ولی اشتباهتون همنیجاست. ما نمیخوایم دقیقا تقلیدی از نرم افزار یا
+            استارتاپ خارجی بکنیم بلکه یه شبکه اجتماعی تشکیل میدیم که افراد بتونن بسته به مهارت هایی که
+            دارن , حالا یا به کارفرما متصل شن یا هنری چیزی دارن بتونن مقاله هایی راجب آثارشون ارایه بدن
+            همچنین نمونه کارهاشون رو :)
+          </p>
+        </div>
+        <div class="col-md-5 mt-sm-4 mt-lg-0 p-sm-4 p-lg-0 col-sm-12">
+          <img src="/media/img/Donuts.jpg" class="w-75" alt="">
+        </div>
+      </div>
+      </div>
+    </div>
+{% endblock %}

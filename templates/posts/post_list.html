@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ username }}
+{% endblock %}
+{% block content %}
+    <style>
+    @media only screen and (min-width: 1024px){
+    .col-lg-4{
+        width: 32% !important;
+    }
+    }
+    </style>
+    <div class="d-block pb-5 mt-5">
+        <div class="container-lg container-fluid">
+            <div class="d-lg-flex justfiy-content-center flex-lg-wrap">
+                {% for post in posts %}
+                    <div class="col-lg-4 col-md-12 text-light bg-dark rounded mx-1 p-3 mt-lg-2 dark-text-box">
+                        <h2>{{ post.title }}</h2>
+                        {% if post.picture %}
+                            <CENTER>
+                            <img src="{{ post.picture.url }}" class="w-75 mx-4 mb-2 mt-2" alt="">
+                            </CENTER>
+                        {% endif %}
+                        <p>{{ post.description|truncatechars:100 }}</p>
+                        <div class="d-flex">
+                            <span class="ml-3" style="color: lightgray; margin-right: 8px">{{ post.author.username }}</span>
+                            {% if request.user in post.likes.all %}
+                                <a href="{% url 'like_url' post.id %}"><span class="ml-3" style="color: lightgray; margin-right: 8px"><i class="fas fa-heart"></i></span></a>
+                                {% else %}
+                                <a href="{% url 'like_url' post.id %}"><span class="ml-3" style="color: lightgray; margin-right: 8px"><i class="far fa-heart"></i></span></a>
+                            {% endif %}
+                            <span class="ml-3" style="color: lightgray; margin-right: 8px">{{ post.likes.count }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

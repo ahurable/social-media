@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<script>
+	$(document).ready(function(){
+		$("#staticBackdrop").modal('show');
+	});
+</script>
+{#    {% if messages %}#}
+{#            <script>#}
+{#            $(document).ready(function(){#}
+{#                $("#messageModal").modal('show');#}
+{#            });#}
+{#            </script>#}
+{#        {% for message in messages %}#}
+{#            <div class="modal bg-{{ message.extra_tags }}" id="messageModal" tabindex="-1">#}
+{#              <div class="modal-dialog">#}
+{#                <div class="modal-content">#}
+{#                  <div class="modal-header">#}
+{#                    <h5 class="modal-title">{{ message }}</h5>#}
+{#                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>#}
+{#                  </div>#}
+{#                  <div class="modal-footer">#}
+{#                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#        {% endfor %}#}
+{##}
+{#    {% endif %}#}
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!---header--->
+
+    <header class="header-customized">
+     <nav class="navbar navbar-expand-lg navbar-customized">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Social Media</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">بلاگ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">درباره ما</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  حسابرسی
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">ورود</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">ثبت نام</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control search-form me-2" type="search" placeholder="جستجو بین مطالب" aria-label="Search">
+              <button class="btn btn-search" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <!----ending header---->
+
+    <!----body---->
+    
+   {% block content %}
+   
+   {% endblock %}
+
+    <!----ending body---->
+
+    <!---footer starting--->
+
+    <footer class="align-items-end">
+      <div class="footer-ex">
+        <ul>
+        <h4>SOCIAL MEDIA</h4>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+
+      </div>
+    </footer>
+
+    <!---footer ending--->
+
+    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'js/bootstrap.esm.js' %}"></script>
+</body>
+</html>

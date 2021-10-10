@@ -1,0 +1,20 @@
+{% extends 'base2.html' %}
+{% block title %}
+صفحه ورود به سایت
+{% endblock %}
+{% block content %}
+    <div class="container justify-content-center d-block p-5" align="center">
+        <h1>ورود به سایت</h1>
+        <br>
+        <br>
+        <div class="col-lg-5 col-md-12 justify-content-center d-block" align="right">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="submit">ورود</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

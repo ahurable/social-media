@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+ثبت نام در سایت{% endblock %}
+{% block content %}
+    <div class="jumbot" align="center">
+        <div style="margin-top: 15%;">
+        <h1 class="display-4">ایجاد حساب کاربری</h1>
+            <hr>
+        <p class="lead">برای استفاده از خدمات متعدد سایت ما لطفا اقدام به ایجاد یک حساب کاربری کنید:)</p>
+        </div>
+      </div>
+    <div class="container justify-content-center d-block p-5" align="center">
+        <div class="col-lg-5 col-md-12 justify-content-center d-block text-light" align="right">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="checkbox" id="showPasswordCheck" style="color: white;" onclick="showPassword()">
+                <label for="showPasswordCheck">نمایش کلمه عبور</label>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="submit">ثبت نام</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

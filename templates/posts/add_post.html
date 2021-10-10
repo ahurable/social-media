@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+افزودن پست
+{% endblock %}
+{% block content %}
+
+         <div class="jumbot" align="center">
+           <div style="margin-top: 15%;">
+           <h1 class="display-4">افزودن پست</h1>
+           <hr class="my-4">
+           <p>چیز هایی که فکر میکنید باید گفته شوند را بنویسید :)</p>
+           </div>
+         </div>
+       </header>
+   
+       <!----ending header---->
+
+
+
+
+        <!----content---->
+
+
+        <div class="mb-5">
+            <div class="container d-lg-flex justify-content-center">
+                <div class="col-md-6 col-sm-12">
+                    <center>
+                    <img src="/media/img/post_image.png" style="margin-right: -5.5%;" width="90%"/>
+                    </center>
+                </div>
+                <div class="col-md-6 col-sm-12 text-light" style="margin-top: 0%;">
+                    <form method="post" enctype="multipart/form-data" class="mx-3">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="ذخیره" class="btn btn-primary btn-block mt-3">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!----ending content---->
+
+
+
+  
+
+{% endblock %}

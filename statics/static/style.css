@@ -1,0 +1,191 @@
+/*  font introducing starting  */
+
+@font-face{
+    font-family: 'vazir';
+    src: url('fonts/vazir-font-v18.0.0/Vazir-Medium.woff')
+}
+
+/*  font introducing ending  */
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'vazir'
+}
+
+body
+{
+    background-color: #212121;
+    direction: rtl;
+}
+
+.navbar-customized
+{
+    background-image: linear-gradient(to bottom, #000000, #121212);
+    position: sticky;
+    top: 0;
+}
+
+.navbar-toggler
+{
+    outline: none !important;
+    color: white !important;
+}
+
+.search-form
+{
+    background-color: #242424;
+    border: solid 0.1px #242424;
+    color: darkgray;
+    margin: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.btn-search
+{
+    margin: 0px !important;
+    background-color: #483d8b;
+    color: white !important;
+    margin: 0px !important;
+    padding: 6px 10px 3px 10px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    transition: all 0.2s;
+}
+
+.btn-search:hover
+{
+    background-color: #342b5e
+}
+
+.bg-dark
+{
+    background-color: #101010 !important;
+}
+
+.form-control
+{
+    background-color: #242424 !important;
+    color: darkgray;
+    border: none;
+    color: #f8f8f8 !important;
+}
+
+.jumbot
+{
+    padding: 100px 24px;
+    padding-bottom: 50%;
+    height: 100%;
+    color: white !important;
+    background-image: linear-gradient(to bottom, #121212, #212121) !important;
+}
+
+.navbar a
+{
+    color: white;
+}
+
+.dropdown-menu
+{
+    padding: 1px 0px !important;
+    margin-top: 5px;
+    background-color: #111111;
+    border: solid 0.6px black;
+}
+
+.dropdown-item
+{
+    color: white !important;
+    transition: all 0.2s;
+}
+
+.dropdown-item:hover 
+{
+    background-color: #212121 !important;
+}
+
+.auth-p {
+    margin-top: 0px;
+}
+
+/* footer */
+
+
+.footer-ex {
+    background-image: linear-gradient(to bottom, #212121, #141414, #121212, #000000);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    padding-top: 5rem;
+    text-align: center;
+    color: white;
+    font-weight: 1800;
+}
+
+.footer-ex ul
+{
+    display: block;
+}
+
+.footer-ex ul li
+{
+    padding: 10px;
+    display: inline-block;
+}
+
+.footer-ex ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20pt;
+}
+
+.fa-youtube:hover
+{
+    transition: all 0.2s;
+    color: #FF0000;
+}
+
+.fa-twitter:hover
+{
+    transition: all 0.2s;
+    color: #00acee;
+}
+
+.fa-instagram:hover
+{
+    transition: all 0.2s;
+    color: #8a3ab9;
+}
+
+.fa-facebook-f:hover
+{
+    transition: all 0.2s;
+    color: #3b5998;
+}
+
+/* desktop */
+
+
+@media only screen and (min-width: 1024px){
+
+
+    .auth-p {
+        margin-top: 30%;
+    }
+
+    .jumbot
+    {
+        padding: 40px 24px;
+        padding-bottom: 8%;
+        height: 5%;
+        color: white !important;
+        background-image: linear-gradient(to bottom, #121212, #212121) !important;
+    }
+
+    .col-lg-6{
+        width: 40% !important;
+    }
+}
+
